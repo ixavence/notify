@@ -3,6 +3,7 @@
 **IXA Notify** is a minimalist and modern JavaScript notification system for web pages. It supports both in-page notifications and browser-native ones via the Notification API. You can also load notifications from JSON and XML files dynamically.
 
 ![preview](https://images.host.ixavence.org/notify.png)
+[![](https://data.jsdelivr.com/v1/package/gh/ixavence/notify/badge)](https://www.jsdelivr.com/package/gh/ixavence/notify)
 
 ---
 
