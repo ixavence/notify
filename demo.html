@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IXA Notify Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <h1>IXA Notify Test</h1>
+    <button onclick="triggerNotification()">Trigger Notification</button>
+    <button onclick="IXANotify.loadFromJSON('notifs.json')">Load from JSON</button>
+    <button onclick="IXANotify.loadFromXML('notifs.xml')">Load from XML</button>
+
+    <script src="ixa-notify.js"></script>
+    <script>
+        function triggerNotification() {
+            IXANotify.notify({
+                id: "notif1",
+                title: "Success!",
+                desc: "Your settings have been saved.",
+                link: "https://ixavence.org",
+                image: "https://host.ixavence.org/host/images/logo.png",
+                sound: "",
+                duration: 4000,
+                type: "in-page",
+                mode: "auto" // auto / dark / light
+            });
+        }
+    </script>
+</body>
+
+</html>

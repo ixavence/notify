@@ -1,0 +1,12 @@
+[
+  {
+    "id": "from-json",
+    "title": "From JSON",
+    "desc": "Loaded using fetch from a .json file!",
+    "image": "https://host.ixavence.org/host/images/logo.png",
+    "link": "https://example.com",
+    "duration": 4000,
+    "type": "notification",
+    "mode": "light"
+  }
+]

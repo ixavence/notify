@@ -1,0 +1,12 @@
+<notifications>
+  <notification id="from-xml">
+    <title>From XML</title>
+    <desc>Loaded using fetch from a .xml file!</desc>
+    <link>https://example.com</link>
+    <image>https://host.ixavence.org/host/images/logo.png</image>
+    <sound></sound>
+    <duration>4000</duration>
+    <type>in-page</type>
+    <mode>dark</mode>
+  </notification>
+</notifications>

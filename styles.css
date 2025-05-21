@@ -1,0 +1,121 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #111827;
+    --desc-color: #4b5563;
+    --accent-color: #3b82f6;
+    --border-color: #e5e7eb;
+    --shadow-color: rgba(0, 0, 0, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #1f2937;
+        --text-color: #f9fafb;
+        --desc-color: #d1d5db;
+        --accent-color: #60a5fa;
+        --border-color: #374151;
+        --shadow-color: rgba(0, 0, 0, 0.4);
+    }
+}
+
+#ixa-notify-container {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 340px;
+    z-index: 10000;
+    font-family: system-ui, sans-serif;
+}
+
+.ixa-notify {
+    display: flex;
+    align-items: flex-start;
+    background: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 14px 16px;
+    box-shadow: 0 8px 20px var(--shadow-color);
+    animation: fadeSlide 0.3s ease-out;
+}
+
+.ixa-notify img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 12px;
+}
+
+.ixa-content {
+    flex: 1;
+}
+
+.ixa-content h4 {
+    margin: 0 0 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.ixa-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--desc-color);
+}
+
+.ixa-content a {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.ixa-content a:hover {
+    text-decoration: underline;
+}
+
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.ixa-notify.dark {
+    background: #1f2937;
+    color: #f3f4f6;
+    border-color: #374151;
+}
+
+.ixa-notify.dark .ixa-content p {
+    color: #d1d5db;
+}
+
+.ixa-notify.dark .ixa-content a {
+    color: #60a5fa;
+}
+
+.ixa-notify.light {
+    background: #ffffff;
+    color: #1f2937;
+    border-color: #e5e7eb;
+}
+
+.ixa-notify.light .ixa-content p {
+    color: #4b5563;
+}
+
+.ixa-notify.light .ixa-content a {
+    color: #3b82f6;
+}
